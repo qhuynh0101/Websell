@@ -14,40 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const Language = (() => {
         const translations = {
-            en: {
-                search_placeholder: "Search for products...", lang_button: "Language", account_button: "Account", cart_button: "Cart", login: "Login", register: "Register", my_account: "My Account", sell_product: "Sell a Product", logout: "Logout", welcome_title: "Welcome to E-Commerce!", welcome_subtitle: "Your one-stop shop for everything you need.", promo_title: "Summer Sale Spectacle!", promo_subtitle: "Up to 50% off on thousands of items. Don't miss out!", shop_now: "Shop Now", featured_categories: "Featured Categories", category_electronics: "Electronics", category_fashion: "Fashion", category_home: "Home Goods", category_books: "Books", featured_products: "Featured Products", quick_view: "Quick View", add_to_cart: "Add to Cart", your_cart: "Your Shopping Cart", cart_empty: "Your cart is empty.", continue_shopping: "Continue Shopping", order_summary: "Order Summary", subtotal: "Subtotal", checkout: "Proceed to Checkout", remove_item: "Remove", item_added_to_cart: "Item added to cart!", product_desc_placeholder: "A fantastic product that you will surely love. High quality and built to last.", chat_header: "Customer Support", chat_greeting: "Hello! How can we help you today?", chat_placeholder: "Type your message...", footer_about: "Your one-stop shop for everything you need.", footer_useful_links: "Useful Links", footer_about_us: "About Us", footer_privacy: "Privacy Policy", footer_terms: "Terms & Conditions", footer_contact: "Contact", footer_social: "Follow Us", all_products: "All Products",
-            },
-            vi: {
-                search_placeholder: "Tìm kiếm sản phẩm...", lang_button: "Ngôn ngữ", account_button: "Tài khoản", cart_button: "Giỏ hàng", login: "Đăng nhập", register: "Đăng ký", my_account: "Tài khoản của tôi", sell_product: "Bán sản phẩm", logout: "Đăng xuất", welcome_title: "Chào mừng đến với E-Commerce!", welcome_subtitle: "Nơi mua sắm lý tưởng cho mọi nhu cầu của bạn.", promo_title: "Đại Tiệc Giảm Giá Mùa Hè!", promo_subtitle: "Giảm giá tới 50% cho hàng ngàn sản phẩm. Đừng bỏ lỡ!", shop_now: "Mua Ngay", featured_categories: "Danh mục nổi bật", category_electronics: "Điện tử", category_fashion: "Thời trang", category_home: "Đồ gia dụng", category_books: "Sách", featured_products: "Sản phẩm nổi bật", quick_view: "Xem Nhanh", add_to_cart: "Thêm vào giỏ", your_cart: "Giỏ hàng của bạn", cart_empty: "Giỏ hàng của bạn đang trống.", continue_shopping: "Tiếp tục mua sắm", order_summary: "Tóm tắt đơn hàng", subtotal: "Tạm tính", checkout: "Tiến hành thanh toán", remove_item: "Xóa", item_added_to_cart: "Đã thêm sản phẩm vào giỏ hàng!", product_desc_placeholder: "Một sản phẩm tuyệt vời mà bạn chắc chắn sẽ yêu thích. Chất lượng cao và bền bỉ.", chat_header: "Hỗ trợ khách hàng", chat_greeting: "Xin chào! Chúng tôi có thể giúp gì cho bạn?", chat_placeholder: "Nhập tin nhắn của bạn...", footer_about: "Nơi mua sắm lý tưởng cho mọi nhu cầu của bạn.", footer_useful_links: "Liên kết hữu ích", footer_about_us: "Về chúng tôi", footer_privacy: "Chính sách bảo mật", footer_terms: "Điều khoản sử dụng", footer_contact: "Liên hệ", footer_social: "Theo dõi chúng tôi", all_products: "Tất cả sản phẩm",
-            },
-            zh: {
-                search_placeholder: "搜索产品...", lang_button: "语言", account_button: "账户", cart_button: "购物车", login: "登录", register: "注册", my_account: "我的账户", sell_product: "销售产品", logout: "登出", welcome_title: "欢迎来到电子商务！", welcome_subtitle: "您所有需求的一站式商店。", promo_title: "夏季特卖盛会！", promo_subtitle: "数千种商品高达五折优惠。不要错过！", shop_now: "立即购买", featured_categories: "特色分类", category_electronics: "电子产品", category_fashion: "时尚", category_home: "家居用品", category_books: "图书", featured_products: "特色产品", quick_view: "快速查看", add_to_cart: "添加到购物车", your_cart: "您的购物车", cart_empty: "您的购物车是空的。", continue_shopping: "继续购物", order_summary: "订单摘要", subtotal: "小计", checkout: "去结算", remove_item: "移除", item_added_to_cart: "商品已添加到购物车！", product_desc_placeholder: "一款您肯定会喜欢的绝佳产品。高品质，经久耐用。", chat_header: "客户支持", chat_greeting: "你好！我们今天能为您提供什么帮助？", chat_placeholder: "输入您的消息...", footer_about: "您所有需求的一站式商店。", footer_useful_links: "有用链接", footer_about_us: "关于我们", footer_privacy: "隐私政策", footer_terms: "条款与条件", footer_contact: "联系我们", footer_social: "关注我们", all_products: "所有产品",
-            }
+            en: { search_placeholder: "Search for products...", lang_button: "Language", account_button: "Account", cart_button: "Cart", login: "Login", register: "Register", my_account: "My Account", sell_product: "Sell a Product", logout: "Logout", welcome_title: "Welcome to E-Commerce!", welcome_subtitle: "Your one-stop shop for everything you need.", promo_title: "Summer Sale Spectacle!", promo_subtitle: "Up to 50% off on thousands of items. Don't miss out!", shop_now: "Shop Now", featured_categories: "Featured Categories", category_electronics: "Electronics", category_fashion: "Fashion", category_home: "Home Goods", category_books: "Books", featured_products: "Featured Products", quick_view: "Quick View", add_to_cart: "Add to Cart", your_cart: "Your Shopping Cart", cart_empty: "Your cart is empty.", continue_shopping: "Continue Shopping", order_summary: "Order Summary", subtotal: "Subtotal", checkout: "Proceed to Checkout", remove_item: "Remove", item_added_to_cart: "Item added to cart!", product_desc_placeholder: "A fantastic product that you will surely love. High quality and built to last.", chat_header: "Customer Support", chat_greeting: "Hello! How can we help you today?", chat_placeholder: "Type your message...", footer_about: "Your one-stop shop for everything you need.", footer_useful_links: "Useful Links", footer_about_us: "About Us", footer_privacy: "Privacy Policy", footer_terms: "Terms & Conditions", footer_contact: "Contact", footer_social: "Follow Us", all_products: "All Products", },
+            vi: { search_placeholder: "Tìm kiếm sản phẩm...", lang_button: "Ngôn ngữ", account_button: "Tài khoản", cart_button: "Giỏ hàng", login: "Đăng nhập", register: "Đăng ký", my_account: "Tài khoản của tôi", sell_product: "Bán sản phẩm", logout: "Đăng xuất", welcome_title: "Chào mừng đến với E-Commerce!", welcome_subtitle: "Nơi mua sắm lý tưởng cho mọi nhu cầu của bạn.", promo_title: "Đại Tiệc Giảm Giá Mùa Hè!", promo_subtitle: "Giảm giá tới 50% cho hàng ngàn sản phẩm. Đừng bỏ lỡ!", shop_now: "Mua Ngay", featured_categories: "Danh mục nổi bật", category_electronics: "Điện tử", category_fashion: "Thời trang", category_home: "Đồ gia dụng", category_books: "Sách", featured_products: "Sản phẩm nổi bật", quick_view: "Xem Nhanh", add_to_cart: "Thêm vào giỏ", your_cart: "Giỏ hàng của bạn", cart_empty: "Giỏ hàng của bạn đang trống.", continue_shopping: "Tiếp tục mua sắm", order_summary: "Tóm tắt đơn hàng", subtotal: "Tạm tính", checkout: "Tiến hành thanh toán", remove_item: "Xóa", item_added_to_cart: "Đã thêm sản phẩm vào giỏ hàng!", product_desc_placeholder: "Một sản phẩm tuyệt vời mà bạn chắc chắn sẽ yêu thích. Chất lượng cao và bền bỉ.", chat_header: "Hỗ trợ khách hàng", chat_greeting: "Xin chào! Chúng tôi có thể giúp gì cho bạn?", chat_placeholder: "Nhập tin nhắn của bạn...", footer_about: "Nơi mua sắm lý tưởng cho mọi nhu cầu của bạn.", footer_useful_links: "Liên kết hữu ích", footer_about_us: "Về chúng tôi", footer_privacy: "Chính sách bảo mật", footer_terms: "Điều khoản sử dụng", footer_contact: "Liên hệ", footer_social: "Theo dõi chúng tôi", all_products: "Tất cả sản phẩm", },
+            zh: { search_placeholder: "搜索产品...", lang_button: "语言", account_button: "账户", cart_button: "购物车", login: "登录", register: "注册", my_account: "我的账户", sell_product: "销售产品", logout: "登出", welcome_title: "欢迎来到电子商务！", welcome_subtitle: "您所有需求的一站式商店。", promo_title: "夏季特卖盛会！", promo_subtitle: "数千种商品高达五折优惠。不要错过！", shop_now: "立即购买", featured_categories: "特色分类", category_electronics: "电子产品", category_fashion: "时尚", category_home: "家居用品", category_books: "图书", featured_products: "特色产品", quick_view: "快速查看", add_to_cart: "添加到购物车", your_cart: "您的购物车", cart_empty: "您的购物车是空的。", continue_shopping: "继续购物", order_summary: "订单摘要", subtotal: "小计", checkout: "去结算", remove_item: "移除", item_added_to_cart: "商品已添加到购物车！", product_desc_placeholder: "一款您肯定会喜欢的绝佳产品。高品质，经久耐用。", chat_header: "客户支持", chat_greeting: "你好！我们今天能为您提供什么帮助？", chat_placeholder: "输入您的消息...", footer_about: "您所有需求的一站式商店。", footer_useful_links: "有用链接", footer_about_us: "关于我们", footer_privacy: "隐私政策", footer_terms: "条款与条件", footer_contact: "联系我们", footer_social: "关注我们", all_products: "所有产品", }
         };
-        const setLanguage = (lang) => {
-            localStorage.setItem('language', lang);
-            _applyTranslations(lang);
-        };
+        const setLanguage = (lang) => { localStorage.setItem('language', lang); _applyTranslations(lang); };
         const _applyTranslations = (lang) => {
             if (!translations[lang]) lang = 'en';
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.dataset.translate;
-                if (translations[lang][key]) el.innerText = translations[lang][key];
-            });
-            document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
-                const key = el.dataset.translatePlaceholder;
-                if (translations[lang][key]) el.placeholder = translations[lang][key];
-            });
+            document.querySelectorAll('[data-translate]').forEach(el => { const key = el.dataset.translate; if (translations[lang][key]) el.innerText = translations[lang][key]; });
+            document.querySelectorAll('[data-translate-placeholder]').forEach(el => { const key = el.dataset.translatePlaceholder; if (translations[lang][key]) el.placeholder = translations[lang][key]; });
             document.documentElement.lang = lang;
         };
-        const init = () => {
-            const savedLang = localStorage.getItem('language') || 'en';
-            setLanguage(savedLang);
-        };
-        const get = (key) => {
-            const lang = localStorage.getItem('language') || 'en';
-            return translations[lang][key] || key;
-        };
+        const init = () => { const savedLang = localStorage.getItem('language') || 'en'; setLanguage(savedLang); };
+        const get = (key) => { const lang = localStorage.getItem('language') || 'en'; return translations[lang][key] || key; };
         return { setLanguage, init, get };
     })();
     
@@ -95,14 +74,50 @@ document.addEventListener("DOMContentLoaded", () => {
         return { add, remove, init, render: _render };
     })();
     
+    // --- CORRECTED UI CONTROLLER ---
     const UIController = (() => {
-        document.getElementById('accountBtn')?.addEventListener('click', (e) => { e.stopPropagation(); document.getElementById('accountDropdown')?.classList.toggle('hidden'); document.getElementById('languageDropdown')?.classList.add('hidden'); });
-        document.getElementById('languageBtn')?.addEventListener('click', (e) => { e.stopPropagation(); document.getElementById('languageDropdown')?.classList.toggle('hidden'); document.getElementById('accountDropdown')?.classList.add('hidden'); });
-        document.addEventListener('click', () => { document.getElementById('accountDropdown')?.classList.add('hidden'); document.getElementById('languageDropdown')?.classList.add('hidden'); });
+        const accountBtn = document.getElementById('accountBtn');
+        const accountDropdown = document.getElementById('accountDropdown');
+        const languageBtn = document.getElementById('languageBtn');
+        const languageDropdown = document.getElementById('languageDropdown');
+
+        const toggleDropdown = (dropdownToToggle, otherDropdown) => {
+            if (!dropdownToToggle.classList.contains('active')) {
+                otherDropdown?.classList.remove('active');
+            }
+            dropdownToToggle.classList.toggle('active');
+        };
+
+        accountBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown(accountDropdown, languageDropdown);
+        });
+
+        languageBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown(languageDropdown, accountDropdown);
+        });
+
+        document.addEventListener('click', () => {
+            accountDropdown?.classList.remove('active');
+            languageDropdown?.classList.remove('active');
+        });
+
+        accountDropdown?.addEventListener('click', (e) => e.stopPropagation());
+        languageDropdown?.addEventListener('click', (e) => e.stopPropagation());
+
         const chatButton = document.getElementById('chatButton');
         const chatBox = document.getElementById('chatBox');
-        chatButton?.addEventListener('click', () => { chatBox.style.display = 'flex'; chatButton.style.animation = 'none'; });
-        document.getElementById('closeChat')?.addEventListener('click', () => { chatBox.style.display = 'none'; chatButton.style.animation = 'pulse 2.5s infinite'; });
+        chatButton?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            chatBox.style.display = 'flex';
+            chatButton.style.animation = 'none';
+        });
+        document.getElementById('closeChat')?.addEventListener('click', () => {
+            chatBox.style.display = 'none';
+            chatButton.style.animation = 'pulse 2.5s infinite';
+        });
+
         window.toggleMobileSearch = () => document.getElementById('mobileSearchInput')?.classList.toggle('hidden');
     })();
 
@@ -115,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const icons = { success: 'fas fa-check-circle', error: 'fas fa-times-circle', info: 'fas fa-info-circle' };
             toast.innerHTML = `<i class="toast-icon ${icons[type]}"></i><span>${message}</span>`;
             container.appendChild(toast);
-            setTimeout(() => toast.remove(), 5000);
         };
         return { show: showToast };
     })();
@@ -147,9 +161,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.showPage = (pageId) => {
         document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
         const page = document.getElementById(pageId);
-        if (page) { page.classList.add('active'); Animations.init(); if (pageId === 'cartPage') Cart.render(); }
+        if (page) {
+            page.classList.add('active');
+            Animations.init(); 
+            if (pageId === 'cartPage') Cart.render();
+        }
         window.scrollTo(0, 0);
     };
+
     window.setLanguage = (lang) => { Language.setLanguage(lang); renderAllProducts(); if (document.getElementById('cartPage')?.classList.contains('active')) Cart.render(); };
     window.Cart = Cart;
     window.QuickView = QuickView;
@@ -158,10 +177,36 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderAllProducts() {
         const featuredGrid = document.getElementById('featured-products-grid');
         const allGrid = document.getElementById('all-products-grid');
+        if(!featuredGrid && !allGrid) return;
+
         const lang = localStorage.getItem('language') || 'en';
-        const productHtml = Products.getAll().map((product, index) => `<div data-observe class="bg-white rounded-lg shadow-md overflow-hidden card-hover-effect" style="transition-delay: ${index * 50}ms;"><div class="relative group"><img src="${product.image}" alt="${product.name[lang]}" class="w-full h-64 object-cover"><div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center"><button class="text-white bg-indigo-600 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" onclick="QuickView.open(${product.id})">${Language.get('quick_view')}</button></div></div><div class="p-4"><h4 class="font-semibold text-lg mb-2 truncate">${product.name[lang]}</h4><p class="text-xl font-bold text-indigo-600 mb-4">$${product.price.toFixed(2)}</p><button class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 flex items-center justify-center button-hover-effect" onclick="Cart.add(${product.id})"><i class="fas fa-shopping-cart mr-2"></i> ${Language.get('add_to_cart')}</button></div></div>`).join('');
-        if(featuredGrid) featuredGrid.innerHTML = productHtml;
-        if(allGrid) allGrid.innerHTML = productHtml;
+        const products = Products.getAll();
+        const featuredHtml = products.slice(0, 4).map((product, index) => createProductCard(product, lang, index)).join('');
+        const allHtml = products.map((product, index) => createProductCard(product, lang, index)).join('');
+        
+        if (featuredGrid) featuredGrid.innerHTML = featuredHtml;
+        if (allGrid) allGrid.innerHTML = allHtml;
+    }
+    
+    function createProductCard(product, lang, index) {
+        return `<div data-observe class="bg-white rounded-lg shadow-md overflow-hidden card-hover-effect" style="transition-delay: ${index * 50}ms;">
+            <div class="relative group">
+                <img src="${product.image}" alt="${product.name[lang]}" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                    <button class="text-white bg-indigo-600 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" onclick="QuickView.open(${product.id})">
+                        ${Language.get('quick_view')}
+                    </button>
+                </div>
+            </div>
+            <div class="p-4 flex flex-col h-full">
+                <h4 class="font-semibold text-lg mb-2 truncate">${product.name[lang]}</h4>
+                <div class="flex-grow"></div>
+                <p class="text-xl font-bold text-indigo-600 mb-4">$${product.price.toFixed(2)}</p>
+                <button class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 flex items-center justify-center button-hover-effect" onclick="Cart.add(${product.id})">
+                    <i class="fas fa-shopping-cart mr-2"></i> ${Language.get('add_to_cart')}
+                </button>
+            </div>
+        </div>`;
     }
 
     function initApp() {
@@ -169,8 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
             Language.init();
             renderAllProducts();
             Cart.init();
+            Animations.init(); 
             showPage('homepage');
-            Animations.init();
         } catch (error) {
             console.error("Application initialization error:", error);
         } finally {

@@ -1,13 +1,4 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    scroll-behavior: smooth;
-}
-
-/* --- PRELOADER --- */
+/* --- Preloader --- */
 #preloader {
     position: fixed;
     top: 0;
@@ -15,141 +6,122 @@ body {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 9999;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
+
 .spinner {
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #4f46e5;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
+    border-left-color: #4f46e5; /* Indigo color */
+    animation: spin 1s ease infinite;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* --- PAGE SECTIONS --- */
+/* --- Page Sections Logic --- */
 .page-section {
     display: none;
 }
+
 .page-section.active {
     display: block;
-    animation: pageFadeIn 0.5s ease-in-out;
-}
-@keyframes pageFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
-/* FIX: Ensure the modal remains a flex container to stay centered */
-#quick-view-modal.active {
-    display: flex;
-}
-
-/* --- ANIMATIONS --- */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); }
-    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(79, 70, 229, 0); }
-}
-
-/* Scroll-based animation classes */
+/* --- Scroll-in Animations --- */
 [data-observe] {
     opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 [data-observe].visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Gradient Background Animation */
-.animated-gradient-bg {
-    background: linear-gradient(-45deg, #4f46e5, #7c3aed, #db2777, #f59e0b);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* --- Dropdown Animations --- */
+#languageDropdown,
+#accountDropdown {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* --- COMPONENT STYLES & EFFECTS --- */
+#languageDropdown.active,
+#accountDropdown.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* --- Quick View Modal Animation --- */
+#quick-view-modal {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#quick-view-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#quick-view-modal > div { /* The white container */
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+#quick-view-modal.active > div {
+    transform: scale(1);
+}
+
+/* --- Hover Effects --- */
 .card-hover-effect {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-hover-effect:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
 }
 .button-hover-effect {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .button-hover-effect:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
 }
 
-/* --- TOAST NOTIFICATIONS --- */
-#toast-container {
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    z-index: 9998;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.toast {
-    background-color: #fff;
-    color: #333;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-left: 5px solid;
-    animation: slideInRight 0.5s forwards, fadeOut 0.5s 4.5s forwards;
-    min-width: 300px;
-}
-.toast.success { border-color: #22c55e; }
-.toast.error { border-color: #ef4444; }
-.toast.info { border-color: #3b82f6; }
-.toast-icon { font-size: 20px; }
-.toast.success .toast-icon { color: #22c55e; }
-.toast.error .toast-icon { color: #ef4444; }
-.toast.info .toast-icon { color: #3b82f6; }
-@keyframes slideInRight {
-    from { transform: translateX(120%); }
-    to { transform: translateX(0); }
-}
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; transform: scale(0.9); }
+/* --- Animated Gradient --- */
+.animated-gradient-bg {
+    background: linear-gradient(-45deg, #a78bfa, #7e22ce, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
-/* --- CHAT WIDGET --- */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Chat Widget --- */
 #chatWidget {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 100;
 }
 #chatButton {
     background-color: #4f46e5;
@@ -162,70 +134,74 @@ body {
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
     animation: pulse 2.5s infinite;
 }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 #chatBox {
-    position: absolute;
-    bottom: 80px;
-    right: 0;
-    width: 350px;
-    max-width: 90vw;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
     display: none;
     flex-direction: column;
+    width: 350px;
     height: 450px;
-    animation: fadeInUp 0.3s ease;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 .chat-header {
-    background-color: #4f46e5;
-    color: white;
-    padding: 1rem;
-    font-weight: bold;
+    background: #4f46e5; color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;
+}
+.chat-body { flex-grow: 1; padding: 15px; overflow-y: auto; }
+.chat-footer { display: flex; padding: 10px; border-top: 1px solid #e5e7eb; }
+.chat-footer input { flex-grow: 1; border: 1px solid #d1d5db; padding: 8px; border-radius: 20px; outline: none; }
+.chat-footer button { background: #4f46e5; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; margin-left: 10px; cursor: pointer; }
+
+
+/* --- Toast Notifications --- */
+#toast-container {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 999;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+.toast {
+    display: flex;
     align-items: center;
-}
-.chat-body {
-    flex-grow: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    background-color: #f9fafb;
-}
-.chat-footer {
-    padding: 1rem;
-    border-top: 1px solid #e5e7eb;
-    display: flex;
-    gap: 0.5rem;
-}
-.chat-footer input {
-    flex-grow: 1;
-    border: 1px solid #d1d5db;
-    padding: 0.5rem;
+    padding: 12px 20px;
     border-radius: 8px;
-    outline: none;
-}
-.chat-footer input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
-}
-.chat-footer button {
-    background-color: #4f46e5;
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: slide-in 0.5s forwards, slide-out 0.5s forwards 4.5s;
+}
+.toast.success { background-color: #22c55e; }
+.toast.error { background-color: #ef4444; }
+.toast.info { background-color: #3b82f6; }
+.toast-icon { margin-right: 10px; font-size: 20px; }
+
+@keyframes slide-in {
+    from { transform: translateX(120%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-out {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(120%); opacity: 0; }
 }
 
-/* Empty Cart Message Style */
+/* --- Cart Styles --- */
 .cart-empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
     text-align: center;
-    padding: 40px;
-    border: 2px dashed #d1d5db;
-    border-radius: 8px;
 }
